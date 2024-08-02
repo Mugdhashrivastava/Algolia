@@ -23,7 +23,7 @@ This helps us to see data in various formats
 1.  Go to configuration tab now that you are inside index of project
 2.  Go to facets tab (towards bottom of the list on left side) 
 3.  Add attributes( in right hand side) 
-attributes are fields of your json 
+- attributes are fields of your json 
 4. Set all the attributes to searchable 
 5. Customize other settings as required
 6. Save changes
@@ -37,5 +37,18 @@ attributes are fields of your json
 6. This tab has three options at right : Delete, edit, view
 7. delete: deletes the page , view: you can view the page without manipulating it
 8. edit: here yo can add edit facets and get an idea of how it would appear on actual page
+
+## To add facets in page
+1. Select add filter
+2. Select the type of filter or form you want y our facet to be in 
+3. Give title to be displayed
+4. add the attribute (that you made during creation of facets)
+5. Adjust rest of the parameters as per requirements
+6. You can se preview on Right hand side
+7. After saving it you can see it on actual page
+   
+
+   
+
    
 
