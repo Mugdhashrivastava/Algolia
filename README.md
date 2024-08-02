@@ -46,6 +46,15 @@ This helps us to see data in various formats
 5. Adjust rest of the parameters as per requirements
 6. You can se preview on Right hand side
 7. After saving it you can see it on actual page
+
+# Implementing instantSearch.js
+
+## Accessing the Documentaion
+1.Go to (https://www.algolia.com/)
+2. Select Developers(top bar)> Documentation (dropdown)>new page> Select API references (from top bar)> Select InstantSearch.js under uI libraries
+3. You will find documentation of [instantSearch](https://www.algolia.com/doc/api-reference/widgets/js/) but you have to use the same method to see any documentation
+
+
    
 
    
