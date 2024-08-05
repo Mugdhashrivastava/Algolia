@@ -55,6 +55,33 @@ This helps us to see data in various formats
 3. You will find documentation of [instantSearch](https://www.algolia.com/doc/api-reference/widgets/js/) but you have to use the same method to see any documentation
 
 
+## Installing library 
+Reference : 1.  [Install library](https://www.algolia.com/doc/guides/building-search-ui/installation/js/)  : select link of installing libaray on first page of instantSearch.js documentation as already told in Acessing the documentation section
+            2.  [Dev Parcel](https://parceljs.org/getting-started/webapp/) 
+
+Method : 1. Create folder of project and open vs code in it
+         2. Inside project create src folder (since we are using parcel we will follow this method of folder structure)
+         3. Folder structure of our project 
+         ```md
+
+├── src
+│   ├── butto
+│   ├── button.js
+│   ├── button.js.map
+│   ├── button.stories.d.ts
+│   ├── button.stories.js
+│   ├── button.stories.js.map
+│   ├── index.d.ts
+│   ├── index.js
+│   └── 
+├── package.json
+├
+│  
+│   
+│   
+└── other modues```
+
+
    
 
    
