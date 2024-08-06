@@ -64,8 +64,8 @@ Method :
 1. Create folder of project and open vs code in it
 2. Inside project create src folder (since we are using parcel we will follow this method of folder structure as parcels package.json has this kind of source)
 3. Folder structure of our project :
-4. 
-- mermaid feature by markdown which is already supported by github is used here to make flowchart
+   
+- mermaid feature by markdown is used here to make flowchart which is already supported by github 
 
 # Basic Project hierarchy
 
@@ -75,7 +75,36 @@ graph TD
   ProjectName --> package-n-modules[package-n-modules]
   src[src] --> index.html[index.html]
   src[src] --> assets[assets] -->js[js]--> script.js[script.js]
-  
+
+
+```
+4. Write basic html in index.html
+5. In same project write terminal commands
+(if not in same project do cd projectname path)
+
+```npm init```
+
+   To set up parcel in project
+```npm install --save-dev parcel```  
+
+6. Replace 
+```
+"main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+```
+  in package.json with 
+```
+  "source": "src/index.html",
+  "scripts": {
+    "start": "parcel",
+    "build": "parcel build"
+  },
+```
+
+
+
 
 
 
