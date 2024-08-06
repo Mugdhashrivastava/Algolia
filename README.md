@@ -56,30 +56,30 @@ This helps us to see data in various formats
 
 
 ## Installing library 
-Reference : 1.  [Install library](https://www.algolia.com/doc/guides/building-search-ui/installation/js/)  : select link of installing libaray on first page of instantSearch.js documentation as already told in Acessing the documentation section
-            2.  [Dev Parcel](https://parceljs.org/getting-started/webapp/) 
+Reference : 
+1.  [Install library](https://www.algolia.com/doc/guides/building-search-ui/installation/js/)  : select link of installing libaray on first page of instantSearch.js documentation as already told in Acessing the documentation section
+2.  [Dev Parcel](https://parceljs.org/getting-started/webapp/)   parcel >get started> web app
 
-Method : 1. Create folder of project and open vs code in it
-         2. Inside project create src folder (since we are using parcel we will follow this method of folder structure)
-         3. Folder structure of our project 
-         ```md
+Method :
+1. Create folder of project and open vs code in it
+2. Inside project create src folder (since we are using parcel we will follow this method of folder structure as parcels package.json has this kind of source)
+3. Folder structure of our project :
+4. 
+- mermaid feature by markdown which is already supported by github is used here to make flowchart
 
-├── src
-│   ├── butto
-│   ├── button.js
-│   ├── button.js.map
-│   ├── button.stories.d.ts
-│   ├── button.stories.js
-│   ├── button.stories.js.map
-│   ├── index.d.ts
-│   ├── index.js
-│   └── 
-├── package.json
-├
-│  
-│   
-│   
-└── other modues```
+# Basic Project hierarchy
+
+```mermaid
+graph TD
+  ProjectName[ProjectName] --> src[src]
+  ProjectName --> package-n-modules[package-n-modules]
+  src[src] --> index.html[index.html]
+  src[src] --> assets[assets] -->js[js]--> script.js[script.js]
+  
+
+
+
+
 
 
    
