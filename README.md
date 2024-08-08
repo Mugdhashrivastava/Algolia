@@ -104,8 +104,11 @@ graph TD
 ```
 
 
-
-
+8/08/2024
+1. configure
+2. API parameters
+3. sortFacetValuesBy
+4. 
 
 
 
