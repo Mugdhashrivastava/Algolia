@@ -103,6 +103,48 @@ graph TD
   },
 ```
 
+7. Now everytime you want to run this project use ```npm start```
+
+### installing instant search dependencies
+
+1. Go to  [Install library](https://www.algolia.com/doc/guides/building-search-ui/installation/js/)
+2. in terminal ```npm install algoliasearch instantsearch.js```
+3. Include
+```import instantsearch from 'instantsearch.js';```
+in js fie
+4. Your js file should look like this, so paste this boilerplate code
+```
+import algoliasearch from 'algoliasearch/lite';
+import instantsearch from 'instantsearch.js';
+import { searchBox, hits } from 'instantsearch.js/es/widgets';
+
+searchClient = algoliasearch('YourApplicationID', 'YourSearchOnlyAPIKey');
+
+const search = instantsearch({
+  indexName: 'demo_ecommerce',
+  searchClient,
+});
+
+search.addWidgets([
+  searchBox({
+    container: "#searchbox"
+  }),
+
+  hits({
+    container: "#hits"
+  })
+]);
+
+search.start();
+```
+
+5. include this css for having basic css
+```
+<script src="https://cdn.jsdelivr.net/npm/algoliasearch@4.24.0/dist/algoliasearch-lite.umd.js" integrity="sha256-b2n6oSgG4C1stMT/yc/ChGszs9EY/Mhs6oltEjQbFCQ=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/instantsearch.js@4.73.4/dist/instantsearch.production.min.js" integrity="sha256-KhJczbX11JwgRQX1pcxQOK+/ymw2x3XxJqz1CUIMHBk=" crossorigin="anonymous"></script>
+```
+6. replace 'YourApplicationID', 'YourSearchOnlyAPIKey' with respective value
+
 
 8/08/2024
 1. configure
