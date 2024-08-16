@@ -78,7 +78,7 @@ graph TD
 
 
 ```
-4. Write basic html in index.html
+4. Write basic html in index.html or use ! and enter to get boilerplate code
 5. In same project write terminal commands
 (if not in same project do cd projectname path)
 
@@ -138,7 +138,7 @@ search.addWidgets([
 search.start();
 ```
 
-5. include this css for having basic css
+5. include this css for having basic css in your html file
 ```
 <script src="https://cdn.jsdelivr.net/npm/algoliasearch@4.24.0/dist/algoliasearch-lite.umd.js" integrity="sha256-b2n6oSgG4C1stMT/yc/ChGszs9EY/Mhs6oltEjQbFCQ=" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/instantsearch.js@4.73.4/dist/instantsearch.production.min.js" integrity="sha256-KhJczbX11JwgRQX1pcxQOK+/ymw2x3XxJqz1CUIMHBk=" crossorigin="anonymous"></script>
