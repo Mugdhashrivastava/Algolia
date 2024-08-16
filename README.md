@@ -146,6 +146,19 @@ search.start();
 6. replace 'YourApplicationID', 'YourSearchOnlyAPIKey' with respective value
 
 
+
+### How to find your aplication ID and your api key
+1. Go to dashboard (https://dashboard.algolia.com/apps/S4DA3UQ9TS/dashboard) and login
+2. go to settings in bottom left
+3. Select "API keys" option under Team and access
+4. Now you can copy Application ID and search api key from here
+   (https://dashboard.algolia.com/account/api-keys/all?applicationId=S4DA3UQ9TS)
+
+
+
+
+
+
 8/08/2024
 1. configure
 2. API parameters
