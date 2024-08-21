@@ -16,6 +16,39 @@ search.addWidgets([
   hits({
     container: "#hits"
   })
+
+
+  index({
+    indexName: "CLOTH",
+    indexId: "product1",
+  }).addWidgets([
+    refinementList({
+      container: "#refinement-list",
+      attribute: "color",
+    }),
+    // configure({
+    
+    // sortFacetValuesBy: 'alpha',
+    
+
+    // }),
+    
+    hits({
+      container: "#hits",
+    }),
+    rangeSlider({
+      container: "#range-slider",
+      attribute: "price",
+    }),
+    menu({
+      container: "#menu",
+      attribute: "material",
+      
+      sortBy:["count"], //isse hmne uska odering inhibit kiya h upon selection
+      // transformItems(it
+    })
+  ]),
+
 ]);
 
 search.start();

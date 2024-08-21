@@ -5,7 +5,7 @@ Algolia is a search-as-a-service API that focuses on providing the best experien
 ##  Storing data
 1. Create an account on (https://www.algolia.com/)
 2. Create an application: get started> top left - create an application
-(3. rename in bottom left -settings>application>rename
+3. rename in bottom left -settings>application>rename
 4. go to the application again
 5. {To see indexes go to left hand panel and select search option} create index(basically where data is stored )> index name capital( check the naming convention as shown)
 6. upload data in the index in the form of JSON either enter manual JSON or you can upload a JSON file  [ you can use (www.mockaroo.com) json generator for product data or anything ]

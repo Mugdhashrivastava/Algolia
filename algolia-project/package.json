@@ -1,0 +1,19 @@
+{
+  "name": "algolia-project",
+  "version": "1.0.0",
+  "source": "src/index.html",
+  "scripts": {
+    "start": "parcel",
+    "build": "parcel build"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "parcel": "^2.12.0"
+  },
+  "dependencies": {
+    "algoliasearch": "^5.0.2",
+    "instantsearch.js": "^4.73.4"
+  }
+}
