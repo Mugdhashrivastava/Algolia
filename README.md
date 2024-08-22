@@ -154,10 +154,25 @@ search.start();
 4. Now you can copy Application ID and search api key from here
    (https://dashboard.algolia.com/account/api-keys/all?applicationId=S4DA3UQ9TS)
 
+### Basic setup is done now 
 
 
 
 
+
+
+
+
+
+
+
+
+
+
+ 
+To include: how to have multiple index
+routing 
+autocomplete
 
 8/08/2024
 1. configure
