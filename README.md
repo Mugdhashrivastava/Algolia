@@ -163,7 +163,8 @@ hits: results of the json
 2. [facets](https://www.algolia.com/doc/api-reference/widgets/js/) try different kinds of facets mentioned in side bar menu to implement in the code. Try menu, hits, hierarchicalMenu, rangeSlider, pagination, voiceSearch etc 
 
 
-
+3.[multiple index](https://www.algolia.com/doc/api-reference/widgets/index-widget/js/) if you have multiple index use this article. 
+-For example in my application called 'e_commerce' there are two index called CLOTH and SHOES which have data of clothes and shoes respectively so to search on the multiple index that is if i type blue on searchbar it should search on data of shoes and clothes as well giving blue shoes and data.
 
 
 
