@@ -154,12 +154,13 @@ search.start();
 4. Now you can copy Application ID and search api key from here
    (https://dashboard.algolia.com/account/api-keys/all?applicationId=S4DA3UQ9TS)
 
-### Basic setup is done now 
+### Reference links
+Now that the basic setup is done use these links to read documentations to implement the next things
 
+1. [hits](https://www.algolia.com/doc/api-reference/widgets/hits/js/) Use hits section of the documentation to print hits 
+hits: results of the json 
 
-
-
-
+2. [facets](https://www.algolia.com/doc/api-reference/widgets/js/) try different kinds of facets mentioned in side bar menu to implement in the code. Try menu, hits, hierarchicalMenu, rangeSlider, pagination, voiceSearch etc 
 
 
 
