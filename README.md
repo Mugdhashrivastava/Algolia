@@ -173,7 +173,7 @@ hits: results of the json
 
  
 To include: how to have multiple index
-routing 
+routing / seo friendly urls
 autocomplete
 
 8/08/2024
