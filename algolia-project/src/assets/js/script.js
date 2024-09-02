@@ -1,11 +1,17 @@
-import algoliasearch from 'algoliasearch/lite';
+import algoliasearch from 'algoliasearch';
 import instantsearch from 'instantsearch.js';
 import { searchBox, hits } from 'instantsearch.js/es/widgets';
 
-searchClient = algoliasearch('S4DA3UQ9TS', '64e8c3ef89266fff1719ad8b745d7e03');
+ 
+
+const searchClient = algoliasearch(
+  "S4DA3UQ9TS",
+  "64e8c3ef89266fff1719ad8b745d7e03"
+);
+
 
 const search = instantsearch({
-  indexName: 'demo_ecommerce',
+  indexName: 'CLOTH',
   searchClient,
 });
 
@@ -15,39 +21,9 @@ search.addWidgets([
   }),
   hits({
     container: "#hits"
-  })
+  }),
 
 
-  index({
-    indexName: "CLOTH",
-    indexId: "product1",
-  }).addWidgets([
-    refinementList({
-      container: "#refinement-list",
-      attribute: "color",
-    }),
-    // configure({
-    
-    // sortFacetValuesBy: 'alpha',
-    
-
-    // }),
-    
-    hits({
-      container: "#hits",
-    }),
-    rangeSlider({
-      container: "#range-slider",
-      attribute: "price",
-    }),
-    menu({
-      container: "#menu",
-      attribute: "material",
-      
-      sortBy:["count"], //isse hmne uska odering inhibit kiya h upon selection
-      // transformItems(it
-    })
-  ]),
 
 ]);
 
