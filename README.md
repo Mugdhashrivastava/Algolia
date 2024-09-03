@@ -167,6 +167,170 @@ hits: results of the json
 -For example in my application called 'e_commerce' there are two index called CLOTH and SHOES which have data of clothes and shoes respectively so to search on the multiple index that is if i type blue on searchbar it should search on data of shoes and clothes as well giving blue shoes and data.
 
 
+exampale of multiple index js
+
+
+```
+import algoliasearch from "algoliasearch/lite";
+import instantsearch from "instantsearch.js";
+import {
+  searchBox,
+  hits,
+  refinementList,
+  index,
+  menu,
+  rangeSlider,
+  configure
+
+} from "instantsearch.js/es/widgets";
+
+
+
+ 
+
+const searchClient = algoliasearch(
+  "S4DA3UQ9TS",
+  "64e8c3ef89266fff1719ad8b745d7e03"
+);
+
+
+
+const search = instantsearch({
+  indexName: "",
+  searchClient,
+
+  routing: {
+    router:history({
+
+      createURL({ qsModule, routeState, location }) {
+        const urlParts = location.href.match(/^(.*?)\/search/);
+        const baseUrl = `${urlParts ? urlParts[1] : ""}/`;
+        // console.log("base url",baseUrl);
+        // console.log(routeState, "routeState1")
+        const categoryPath = routeState.material
+          ? `${getCategorySlug(routeState.material)}/`
+          : "";
+
+          
+        const queryParameters = {};
+
+        if (routeState.query) {
+          queryParameters.query = encodeURIComponent(routeState.query);
+        }
+        if (routeState.page !== 1) {
+          queryParameters.page = routeState.page;
+        }
+        if (routeState.colorList) {
+          queryParameters.colorList =
+            routeState.colorList.map(encodeURIComponent);
+        }
+
+        const queryString = qsModule.stringify(queryParameters, {
+          addQueryPrefix: true,
+          arrayFormat: "repeat",
+        });
+       
+        // console.log(categoryPath,"cp");
+        // console.log(queryString,"qS");
+
+        return `${baseUrl}search/${queryString}${categoryPath}`;
+      },
+
+      parseURL({ qsModule, location }) {
+        const pathnameMatches = location.pathname.match(/search\/(.*?)\/?$/);
+        const material = getCategoryName(
+          (pathnameMatches && pathnameMatches[1]) || ""
+        );
+        const {
+          query = "",
+          page,
+          colorList = [],
+        } = qsModule.parse(location.search.slice(1));
+        // `qs` does not return an array when there's a single value.
+        const allColor = Array.isArray(colorList)
+          ? colorList
+          : [colorList].filter(Boolean);
+
+        return {
+          query: decodeURIComponent(query),
+          page,
+          colorList: allColor.map(decodeURIComponent),
+          material,
+        };
+      },
+    }),
+
+  
+});
+
+search.addWidgets([
+
+//first index
+  index({
+    indexName: "CLOTH",
+    indexId: "product1",
+  }).addWidgets([
+    refinementList({
+      container: "#refinement-list",
+      attribute: "color",
+    }),
+    
+    hits({
+      container: "#hits",
+    }),
+    rangeSlider({
+      container: "#range-slider",
+      attribute: "price",
+    }),
+    menu({
+      container: "#menu",
+      attribute: "material",
+      
+    }),
+  ]),
+
+//second index
+  index({
+    indexName: "SHOE",
+    indexId: "product2",
+  }).addWidgets([
+    refinementList({
+      container: "#refinement-list2",
+      attribute: "color",
+     
+    }),
+    
+
+    hits({
+      container: "#hits2",
+    }),
+
+    menu({
+      container: "#menu2",
+      attribute: "material",
+    }),
+
+    rangeSlider({
+      container: "#range-slider2",
+      attribute: "price",
+    }),
+  ]),
+
+
+
+//common thats why outside of index but inside of search.addWidgets
+  searchBox({
+    container: "#searchbox",
+  })
+]);
+
+search.start();
+
+```
+
+
+
+
 
 
 
