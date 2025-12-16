@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/instantsearch.css@8.3.0/themes/reset-min.css"
+      integrity="sha256-D+cGTF0LVHjuEf+CDRkHeNw/KTHPg47t1AA/qmzxgtA="
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/instantsearch.css@8.3.0/themes/satellite-min.css"
+      integrity="sha256-Qn2jMxB0SkFi+WAf540nGb5LBaVTyjVQLqPNaNjduio="
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+  </head>
+  <body>
+    <div class="">
+      <div id="searchbox"></div>
+      <div id="voiceSearch"></div>
+    </div>
+
+    <div class="">
+      <button id="tab1-btn">CLOTH</button>
+      <button id="tab2-btn">SHOE</button>
+    </div>
+
+    <div id="tab1-content" class="box">
+     
+      <div>
+        <div id="refinement-list"></div>
+        <div id="menu"></div>
+        <div id="range-slider"></div>
+      </div>
+      <div id="hits"></div>
+    </div>
+
+    <div id="tab2-content" class="box">
+  
+      <div>
+        <div id="refinement-list2"></div>
+        <div id="menu2"></div>
+        <div id="range-slider2"></div>
+      </div>
+      <div id="hits2"></div>
+    </div>
+    <script type="module" src="./assets/js/script.js"></script>
+    <script type="text" src="./assets/js/functions.js"></script>
+  </body>
+</html>
